@@ -1,0 +1,13 @@
+<div class="container my-3">
+  <div [ngClass]="messageClass" class="" role="alert" *ngIf="message">
+    {{message}}
+  </div>
+  <div class="card shadow" *ngIf="!loading">
+    <div class="card-body">
+      <h3 class="text-capitalize">{{blog.title}}</h3>
+      <span class="text-muted small">Created by: {{blog.createdBy}} | Created on: {{blog.createdAt | date:"MMM dd, yyyy"}}</span>
+      <hr>
+      <p>{{blog.body}}</p>
+    </div>
+  </div>
+</div>

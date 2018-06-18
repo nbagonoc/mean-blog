@@ -1,0 +1,22 @@
+<div class="container my-3">
+  <div class="col-lg-6 col-md-8 mx-auto" *ngIf="foundBlog">
+    <div [ngClass]="messageClass" class="" role="alert" *ngIf="message">
+      {{message}}
+    </div>
+    <div class="card shadow">
+      <div class="card-header">
+        Please confirm
+      </div>
+      <div class="card-body">
+        Are you sure you want to delete
+        <strong>{{blog.title}}</strong>? Once deleted, this action cannot be undone.
+      </div>
+      <div class="card-footer">
+        <button [disabled]="processing" (click)="deleteBlog()" type="button" class="btn btn-outline-danger btn-sm mr-2" data-dismiss="">
+          <i class="fa fa-trash-alt mr-2"></i>Delete</button>
+        <button [disabled]="processing" (click)="goBack()" type="button" class="btn btn-outline-warning btn-sm">
+          <i class="fas fa-times-circle mr-1"></i> Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
