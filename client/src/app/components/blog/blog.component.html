@@ -1,4 +1,4 @@
-<div class="container my-3">
+<div class="container my-3" *ngIf="user">
   <div [ngClass]="messageClass" class="" role="alert" *ngIf="message && newPost">
     {{message}}
   </div>
@@ -37,8 +37,8 @@
         <button [disabled]="processing || !form.valid" type="submit" class="btn btn-outline-success mr-1">
           <i class="fa fa-check-circle mr-1"></i>Submit
         </button>
-        <button [disabled]="processing" type="button" class="btn btn-outline-danger mr-1" (click)="goBack()">
-          <i class="fa fa-times-circle mr-1"></i>Cancel</button>
+        <!-- <button [disabled]="processing" type="button" class="btn btn-outline-danger mr-1" (click)="goBack()">
+          <i class="fa fa-times-circle mr-1"></i>Cancel</button> -->
       </form>
     </div>
   </div>

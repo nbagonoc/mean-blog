@@ -7,7 +7,8 @@ import { tokenNotExpired } from "angular2-jwt";
   providedIn: "root"
 })
 export class AuthService {
-  domain = "http://localhost:5000/";
+  // domain = "http://localhost:5000/";
+  domain = "";
   authToken;
   user;
   options;

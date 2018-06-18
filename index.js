@@ -23,22 +23,22 @@ mongoose
   .catch(err => console.log(err));
 
 // MIDDLEWARES
+// cors
+app.use(cors());
 // body-parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// cors
-app.use(cors());
 
 // USE ROUTER
 app.use("/authentication", authentication);
 app.use("/blog", blog);
 
 // STATIC FOLDER
-app.use(express.static(path.join(__dirname, "client/dist/client")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // USE ANGULAR AS FRONTEND
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/dist/client/index.html"));
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // SET PORT
