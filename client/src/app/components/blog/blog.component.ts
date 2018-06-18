@@ -7,6 +7,7 @@ import {
 } from "@angular/forms";
 import { AuthService } from "../../services/auth.service";
 import { BlogService } from "../../services/blog.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-blog",
@@ -25,8 +26,9 @@ export class BlogComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService,
-    private blogService: BlogService
+    public authService: AuthService,
+    private blogService: BlogService,
+    private router: Router
   ) {
     this.createNewBlogForm();
   }
