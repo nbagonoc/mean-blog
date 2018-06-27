@@ -31,7 +31,7 @@ export class EditBlogComponent implements OnInit {
         this.messageClass = "alert alert-success";
         this.message = (data as any).message;
         setTimeout(() => {
-          this.router.navigate(["/blog"]);
+          this.router.navigate(["/blogs"]);
         }, 2000);
       } else {
         console.log("clicked but failed proccess");

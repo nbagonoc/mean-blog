@@ -75,7 +75,7 @@ var appRoutes = [
         canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]]
     },
     {
-        path: "blog",
+        path: "blogs",
         component: _components_blog_blog_component__WEBPACK_IMPORTED_MODULE_7__["BlogComponent"],
         canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]]
     },
@@ -512,7 +512,7 @@ var DeleteBlogComponent = /** @class */ (function () {
                 _this.messageClass = "alert alert-success";
                 _this.message = data.message;
                 setTimeout(function () {
-                    _this.router.navigate(["/blog"]);
+                    _this.router.navigate(["/blogs"]);
                 }, 2000);
                 console.log("deleted");
             }
@@ -622,7 +622,7 @@ var EditBlogComponent = /** @class */ (function () {
                 _this.messageClass = "alert alert-success";
                 _this.message = data.message;
                 setTimeout(function () {
-                    _this.router.navigate(["/blog"]);
+                    _this.router.navigate(["/blogs"]);
                 }, 2000);
             }
             else {
@@ -1026,7 +1026,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-light shadow\">\n  <div class=\"container\">\n    <a class=\"navbar-brand\" href=\"#\" routerLink=\"/\">MeanBlog</a>\n    <button class=\"navbar-toggler hidden-lg-up\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapsibleNavId\" aria-controls=\"collapsibleNavId\"\n      aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"collapsibleNavId\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/\">Home</a>\n        </li>\n      </ul>\n      <ul *ngIf=\"!authService.loggedIn()\" class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/register\">Register</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/login\">Login</a>\n        </li>\n      </ul>\n      <ul *ngIf=\"authService.loggedIn()\" class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/blog\">Blog</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/profile\">Profile</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/dashboard\">Dashboard</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"/\" (click)=\"onLogoutClick()\">Logout</a>\n        </li>\n      </ul>\n    </div>\n  </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-light shadow\">\n  <div class=\"container\">\n    <a class=\"navbar-brand\" href=\"#\" routerLink=\"/\">MeanBlog</a>\n    <button class=\"navbar-toggler hidden-lg-up\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapsibleNavId\" aria-controls=\"collapsibleNavId\"\n      aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"collapsibleNavId\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/\">Home</a>\n        </li>\n      </ul>\n      <ul *ngIf=\"!authService.loggedIn()\" class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/register\">Register</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/login\">Login</a>\n        </li>\n      </ul>\n      <ul *ngIf=\"authService.loggedIn()\" class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/blogs\">Blog</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/profile\">Profile</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"#\" routerLink=\"/dashboard\">Dashboard</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <a class=\"nav-link\" href=\"/\" (click)=\"onLogoutClick()\">Logout</a>\n        </li>\n      </ul>\n    </div>\n  </div>\n</nav>"
 
 /***/ }),
 
